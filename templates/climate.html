@@ -1,0 +1,14 @@
+<html>
+<form action="/" method="POST">
+{% csrf_token %}
+Name: <input type="text" name="name"><br />
+year: <input type="text" name="year"><br />
+sevoflurane: <input type="text" name="sevoflurane"><br />
+isofluroane: <input type="text" name="isofluroane"><br />
+desflurane: <input type="text" name="desflurane"><br />
+n2o: <input type="text" name="n2o"><br />
+<input type="submit">
+</form>
+<br><br>
+{% if footprint %}Your carbon footprint was: {{ footprint }}{% endif %}
+</html>
