@@ -1,14 +1,60 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.indigo-pink.min.css">
+	<script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+{% if footprint %}Your carbon footprint was: {{ footprint }}<br><br>{% endif %}
 <form action="/" method="POST">
 {% csrf_token %}
-Name: <input type="text" name="name"><br />
-year: <input type="text" name="year"><br />
-sevoflurane: <input type="text" name="sevoflurane"><br />
-isofluroane: <input type="text" name="isofluroane"><br />
-desflurane: <input type="text" name="desflurane"><br />
-n2o: <input type="text" name="n2o"><br />
-<input type="submit">
+
+<div class="mdl-grid">
+<div class="mdl-cell mdl-cell--3-col">
+<div class="mdl-textfield mdl-js-textfield">
+<input class="mdl-textfield__input" type="text" name="name" id="name">
+<label class="mdl-textfield__label" for="name">name</label>
+</div></div></div>
+<div class="mdl-grid">
+<div class="mdl-cell mdl-cell--3-col">
+<div class="mdl-textfield mdl-js-textfield">
+<input class="mdl-textfield__input" pattern="\d*" type="text" name="year" id="year">
+<label class="mdl-textfield__label" for="name">year</label>
+</div></div></div>
+<div class="mdl-grid">
+<div class="mdl-cell mdl-cell--3-col">
+<div class="mdl-textfield mdl-js-textfield">
+<input class="mdl-textfield__input" pattern="\d*" type="text" name="sevoflurane" id="sevoflurane">
+<label class="mdl-textfield__label" for="name">sevoflurane</label>
+</div></div></div>
+<div class="mdl-grid">
+<div class="mdl-cell mdl-cell--3-col">
+<div class="mdl-textfield mdl-js-textfield">
+<input class="mdl-textfield__input" pattern="\d*" type="text" name="isofluroane" id="isofluroane">
+<label class="mdl-textfield__label" for="name">isofluroane</label>
+</div></div></div>
+<div class="mdl-grid">
+<div class="mdl-cell mdl-cell--3-col">
+<div class="mdl-textfield mdl-js-textfield">
+<input class="mdl-textfield__input" pattern="\d*" type="text" name="desflurane" id="desflurane">
+<label class="mdl-textfield__label" for="name">desflurane</label>
+</div></div></div>
+<div class="mdl-grid">
+<div class="mdl-cell mdl-cell--3-col">
+<div class="mdl-textfield mdl-js-textfield">
+<input class="mdl-textfield__input" pattern="\d*" type="text" name="n2o" id="n2o">
+<label class="mdl-textfield__label" for="name">n2o</label>
+</div></div></div>
+<div class="mdl-grid">
+<div class="mdl-cell mdl-cell--3-col">
+<input class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" type="submit">
+</div></div>
 </form>
-<br><br>
-{% if footprint %}Your carbon footprint was: {{ footprint }}{% endif %}
+</body>
 </html>
