@@ -1,0 +1,1 @@
+web: gunicorn yale_climate.wsgi --log-file -
