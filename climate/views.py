@@ -25,7 +25,7 @@ def view(request):
 		)
 
 		context = {
-			'footprint': int(year) * int(n2o),
+			'footprint': (4*int(sevoflurane) + 7*int(isofluroane) + 189*int(desflurane) + 57*int(n2o)),
 		}
 
 
